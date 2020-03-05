@@ -2,10 +2,11 @@
 
 /* CONTAINER */
 .container {
-  width: 50%;
+  width: 80%;
   max-width: 100%;
-  margin: 0 auto;
-  background: #fff;
+  height: auto;
+  margin: 0 auto 50px;
+  border-radius: 63% 77% 22% 97% / 17% 38% 67% 90%;
 }
 
 .container::after {
@@ -16,68 +17,24 @@
 
 [class^="col-"] {
   float: left;
-  height: 50px;
+  height: auto;
   /* DEBUG: starts  */
-  padding: 16px;
+  /* padding: 16px;
   background: lightblue;
-  text-align: left;
+  text-align: left; */
   /* border: 1px solid red; */
   /* DEBUG: ends */
 }
 
 /* COL-X */
 
-.col-1 {
-  width: calc(100% / 12);
-}
-
-.col-2 {
-  width: calc((100% / 12) * 2);
-}
-
-.col-3 {
-  width: calc((100% / 12) * 3);
-}
-
-.col-4 {
-  width: calc((100% / 12) * 4);
-}
-
-.col-5 {
-  width: calc((100% / 12) * 5);
-}
-
-.col-6 {
-  width: calc((100% / 12) * 6);
-}
-
-.col-7 {
-  width: calc((100% / 12) * 7);
-}
-
-.col-8 {
-  width: calc((100% / 12) * 8);
-}
-
-.col-9 {
-  width: calc((100% / 12) * 9);
-}
-
-.col-10 {
-  width: calc((100% / 12) * 10);
-}
-
-.col-11 {
-  width: calc((100% / 12) * 11);
-}
-
-.col-12 {
-  width: 100%;
-}
-
 /* MEDIA QUERIES - RESPONSIVE SETTINGS */
 
 @media screen and (max-width: 400px) {
+
+  .container {
+    background: orange;
+  }
   .col-xs-1 {
     width: calc(100% / 12);
   }
@@ -125,9 +82,19 @@
   .col-xs-12 {
     width: 100%;
   }
+
+  img {
+    width: auto;
+    height: 45px;
+  }
 }
 
-@media screen and (min-width: 768) and (max-width: 401px) {
+@media screen and (min-width: 401px) and (max-width: 768px) {
+
+  .container {
+    background: lightblue;
+  }
+
   .col-md-1 {
     width: calc(100% / 12);
   }
@@ -175,9 +142,19 @@
   .col-md-12 {
     width: 100%;
   }
+
+  img {
+    width: auto;
+    height: 75px;
+  }
 }
 
 @media screen and (min-width: 769px) {
+
+  .container {
+    background: lightgreen;
+  }
+
   .col-lg-1 {
     width: calc(100% / 12);
   }
@@ -225,109 +202,19 @@
   .col-lg-12 {
     width: 100%;
   }
+
+  img {
+    width: auto;
+    height: 150px;
+  }
 }
-
-/* @media screen and (max-width: 400px) {
-  .col-xs-1,
-  .col-xs-2,
-  .col-xs-3,
-  .col-xs-4,
-  .col-xs-5,
-  .col-xs-6,
-  .col-xs-7,
-  .col-xs-8,
-  .col-xs-9,
-  .col-xs-10,
-  .col-xs-11,
-  .col-xs-12 {
-    width: 100%;
-  }
-} */
-
-/* @media screen and (min-width: 768) and (max-width: 401px) {
-  .col-md-1,
-  .col-md-2,
-  .col-md-3,
-  .col-md-4,
-  .col-md-5,
-  .col-md-6,
-  .col-md-7,
-  .col-md-8,
-  .col-md-9,
-  .col-md-10,
-  .col-md-11,
-  .col-md-12 {
-    width: 100%;
-  }
-} */
-
-/* @media screen and (min-width: 769px) {
-  .col-lg-1,
-  .col-lg-2,
-  .col-lg-3,
-  .col-lg-4,
-  .col-lg-5,
-  .col-lg-6,
-  .col-lg-7,
-  .col-lg-8,
-  .col-lg-9,
-  .col-lg-10,
-  .col-lg-11,
-  .col-lg-12 {
-    width: 100%;
-  }
-} */
 
 /* OFFSET (MARGIN) */
-.offset-1-reverse {
- margin-right: calc(100% / 12);
-}
 
-.offset-1 {
-  margin-left: calc(100% / 12);
-}
-
-.offset-2 {
-  margin-left: calc((100% / 12) * 2);
-}
-
-.offset-3 {
-  margin-left: calc((100% / 12) * 3);
-}
-
-.offset-4 {
-  margin-left: calc((100% / 12) * 4);
-}
-
-.offset-5 {
-  margin-left: calc((100% / 12) * 5);
-}
-
-.offset-6 {
-  margin-left: calc((100% / 12) * 6);
-}
-
-.offset-7 {
-  margin-left: calc((100% / 12) * 7);
-}
-
-.offset-8 {
-  margin-left: calc((100% / 12) * 8);
-}
-
-.offset-9 {
-  margin-left: calc((100% / 12) * 9);
-}
-
-.offset-10{
-  margin-left: calc((100% / 12) * 10);
-}
-
-.offset-11 {
-  margin-left: calc((100% / 12) * 11);
-}
-
-@media screen and (min-width: 768) and (max-width: 401px) {
+@media screen and (max-width: 400px) {
+  .offset-xs-1-reverse {
+   margin-right: calc(100% / 12);
+  }
 
   .offset-xs-1 {
     margin-left: calc(100% / 12);
@@ -374,8 +261,11 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 401px) and (max-width: 768px) {
 
+  .offset-md-1-reverse {
+   margin-right: calc(100% / 12);
+  }
   .offset-md-1 {
     margin-left: calc(100% / 12);
   }
@@ -422,6 +312,10 @@
 }
 
 @media screen and (min-width: 769px) {
+
+  .offset-lg-1-reverse {
+   margin-right: calc(100% / 12);
+  }
 
   .offset-lg-1 {
     margin-left: calc(100% / 12);
