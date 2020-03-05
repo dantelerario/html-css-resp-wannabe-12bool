@@ -34,3 +34,14 @@
   border-radius: 50%;
   padding: 30px;
 }
+
+/* COMMON */
+
+h1,
+h3 {
+  color: #61CE4E;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}

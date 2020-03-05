@@ -6,13 +6,20 @@
   max-width: 100%;
   height: auto;
   margin: 0 auto 50px;
-  border-radius: 63% 77% 22% 97% / 17% 38% 67% 90%;
+  border-radius: 10px;
+  background: rgba(51,71,91, 1);
+  color: rgba(255,255,255, 1);
+  box-shadow: -20px 18px 50px -6px rgba(51,71,91,1);
 }
 
 .container::after {
   content: '';
   display: table;
   clear: both;
+}
+
+.container:hover {
+  transform: scale(1.015);
 }
 
 [class^="col-"] {
@@ -32,10 +39,10 @@
 
 @media screen and (max-width: 400px) {
 
-  .container {
+  /* .container {
     background: orange;
     box-shadow: 5px 5px 1px 1px rgba(0,0,0, 0.5);
-  }
+  } */
   .col-xs-1 {
     width: calc(100% / 12);
   }
@@ -88,14 +95,18 @@
     width: auto;
     height: 45px;
   }
+
+  img:hover {
+    transform: rotate(350deg);
+  }
 }
 
 @media screen and (min-width: 401px) and (max-width: 768px) {
 
-  .container {
+  /* .container {
     background: lightblue;
     box-shadow: 5px 5px 1px 1px rgba(0,0,0, 0.5);
-  }
+  } */
 
   .col-md-1 {
     width: calc(100% / 12);
@@ -149,14 +160,18 @@
     width: auto;
     height: 75px;
   }
+
+  img:hover {
+    transform: rotate(350deg);
+  }
 }
 
 @media screen and (min-width: 769px) {
 
-  .container {
+  /* .container {
     background: lightgreen;
     box-shadow: 5px 5px 1px 1px rgba(0,0,0, 0.5);
-  }
+  } */
 
   .col-lg-1 {
     width: calc(100% / 12);
@@ -209,6 +224,10 @@
   img {
     width: auto;
     height: 150px;
+  }
+
+  img:hover {
+    transform: rotate(350deg);
   }
 }
 
